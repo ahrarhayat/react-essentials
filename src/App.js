@@ -14,7 +14,7 @@ function Main(props)
   return (
     <section>
       <p>We make the {props.adjective} and healthiest food in town</p>
-      <img src={food} alt="" />
+      <img src={food} alt="Ingredients in the kitchen" height={200}/>
       <ul style={{ textAlign: "left" }}>
       {props.dishes.map((dish ,i) => 
       <li key = {dish.id}>{dish.title}</li>)}
