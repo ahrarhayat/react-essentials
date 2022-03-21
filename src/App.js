@@ -10,6 +10,9 @@ function RegularComponent()
   return (<div><h1>Everyone can see this component</h1></div>)
 }
 
+const [,,light] = ["boots","tent","HeadLamp"];
+console.log(light);
+
 function App(props) {
   return(
     <>
