@@ -1,32 +1,17 @@
 import './App.css';
-
-function SecretComponent()
-{
-  return (<div><h1>Secret information for authorised users only</h1></div>)
-}
-
-function RegularComponent()
-{
-  return (<div><h1>Everyone can see this component</h1></div>)
-}
-
-const [,,light] = ["boots","tent","HeadLamp"];
-console.log(light);
+import React, {useState} from 'react';
 
 function App(props) {
+  const [emotion, setEmotion] = useState("happy");
   return(
     <>
-      {props.authorized ? <SecretComponent/> : <RegularComponent/> }
-      </>
+    <h1>Current emotion is {emotion}.</h1>
+    <button onClick={() => setEmotion("happy")}>Happy</button>
+    <button onClick={() => setEmotion("fraustrated")}>Fraustrate</button>
+    <button onClick={() => setEmotion("enthusiastic")}>Enthuse</button>
+    </>
       );
-  //alternate method
-  // if(props.authorized)
-  // {
-  //   return(<SecretComponent/>)
-  // }
-  // else{
-  //   return(<RegularComponent/>)
-  // }
+
 }
 
 export default App;
