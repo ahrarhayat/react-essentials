@@ -1,51 +1,10 @@
 import './App.css';
-import food from './food.jpg'
-function Header(props)
-{
-  return (
-    <header>
-      <h1>{props.name}'s Kitchen</h1>
-    </header>
-  );
-}
-
-function Main(props)
-{
-  return (
-    <section>
-      <p>We make the {props.adjective} and healthiest food in town</p>
-      <img src={food} alt="Ingredients in the kitchen" height={200}/>
-      <ul style={{ textAlign: "left" }}>
-      {props.dishes.map((dish ,i) => 
-      <li key = {dish.id}>{dish.title}</li>)}
-      </ul>
-    </section>
-  );
-}
-
-function Footer(props)
-{
-  return (
-    <section>
-      <p>Copyright {props.year}</p>
-    </section>
-  );
-}
-
-const dishes = ["Mac and Cheese", "Squid", "Karage",  "Salmon"];
-
-const dishObjects = dishes.map((dish,i) => ({id: i, title: dish} ));
-
-//console.log(dishObjects);
-
 
 
 function App() {
   return (
     <div className="App">
-      <Header name = "Zyan"/>
-      <Main adjective = "cheapest" dishes = {dishObjects}/>
-      <Footer year = {new Date().getFullYear()}/>
+      More Components here eventually
     </div>
   );
 }
